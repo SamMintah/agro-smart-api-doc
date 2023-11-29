@@ -312,7 +312,7 @@
         <ul class="search-results"></ul>
       <ul id="toc" class="toc-list-h1">
           <li>
-            <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
+            <a href="#esoko-api-integration-guide-for-mtn-mobile-app" class="toc-h1 toc-link" data-title="Esoko API Integration Guide for MTN Mobile App">Esoko API Integration Guide for MTN Mobile App</a>
               <ul class="toc-list-h2">
                   <li>
                     <a href="#purpose" class="toc-h2 toc-link" data-title="Purpose">Purpose</a>
@@ -410,14 +410,14 @@
       </ul>
         <ul class="toc-footer">
             <li><a href='https://api-agrosmart-esoko.onrender.com/api-docs/#/Generate%20ApiKey/post_create_api_key'>Intaract with the API </a></li>
-            <li><a href='https://esoko.com/'>Documentation Powered by Esoko</a></li>
+            <li><a href='https://esoko.com/'>© 2023 Esoko Documentation Powered by Esoko</a></li>
         </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the documentation for the MTN Mobile App Integration with Esoko APIs. This documentation is designed to guide developers through the seamless incorporation of Esoko&#39;s powerful agricultural services into MTN&#39;s mobile app. By integrating these APIs, users gain access to valuable information such as Market Prices, Weather Forecasts, Agronomic Advisory, and Climate Smart Information.</p>
+        <h1 id='esoko-api-integration-guide-for-mtn-mobile-app'>Esoko API Integration Guide for MTN Mobile App</h1>
+<p>Welcome to the Esoko API documentation for the MTN Mobile App Integration. This API empowers developers to seamlessly connect with Esoko&#39;s agricultural services, providing users access to vital information such as Market Prices, Weather Forecasts, Agronomic Advisory, and Climate Smart Information.</p>
 <h2 id='purpose'>Purpose</h2>
 <p>The primary purpose of this integration is to enhance the user experience within the MTN mobile app by providing real-time and personalized agricultural insights. Developers are encouraged to follow the guidelines outlined in this documentation to ensure a secure, efficient, and successful integration with Esoko&#39;s APIs.</p>
 <h2 id='target-audience'>Target Audience</h2>
@@ -438,7 +438,9 @@
 </ul></li>
 </ul>
 <h2 id='getting-started'>Getting Started</h2>
-<p>Before diving into the API documentation, ensure that you have completed the necessary setup as outlined in the <a href="#authentication">MTN Mobile App Integration with Esoko APIs Setup Guide</a> to guarantee a smooth integration process.</p>
+<blockquote>
+<p>Before proceeding with the API documentation, make sure to complete the essential setup steps outlined in the <a href="#authentication">Esoko APIs Setup Guide</a> to ensure a seamless integration process.</p>
+</blockquote>
 
 <p>Now, let&#39;s explore the detailed API documentation for each service:</p>
 
@@ -499,10 +501,12 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div>
 <ol>
-<li>Copy the generated API key and securely store it. This key will be used in your request header to       access Esoko&#39;s agricultural services.</li>
+<li>Copy the generated API key and securely store it. This key will be used in your request header to access Esoko&#39;s agricultural services.</li>
 </ol>
 
-<p>If you encounter any issues during this process, please refer to the <a href="https://api-agrosmart-esoko.onrender.com/api-docs/">Esoko API Key Management Swagger Documentation</a> for additional details and troubleshooting information.</p>
+<p><aside class="notice">
+If you encounter any issues during this process, Please contact our customer service team to sign up for a developer key and begin using our API today.
+  </aside></p>
 <h1 id='agronomic-advisory-api'>Agronomic Advisory API</h1><h3 id='endpoint'>Endpoint:</h3>
 <p><code>GET: https://api-agrosmart-esoko.onrender.com/agronomic-advice/v1/daily</code></p>
 
@@ -543,9 +547,27 @@
 </tbody></table>
 
 <blockquote>
-<p>status code : 200</p>
+<p>Headers</p>
 
-<p>Response Structure:</p>
+<ul>
+<li>Content-Type: <code>application/json</code></li>
+<li>Authorization: [ API Key :  <code>your-generated-api-key</code> ]</li>
+</ul>
+
+<p>Responses</p>
+
+<ul>
+<li>200 OK</li>
+<li>404 Not Found</li>
+</ul>
+
+<p>Headers</p>
+
+<ul>
+<li>Content-Type: <code>application/json</code></li>
+</ul>
+
+<p>body Structure:</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1bad5efd-20ba-41f6-b5d6-c07ab4c0fe3d"</span><span class="p">,</span><span class="w">
@@ -575,11 +597,6 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div><h3 id='authorization'>Authorization</h3>
 <p>Include the following <strong>API Key</strong> in the header of your request:</p>
-
-<ul>
-<li><strong>Key:</strong> <code>x-api-key</code></li>
-<li><strong>Value:</strong> <code>your-generated-api-key</code> </li>
-</ul>
 <h3 id='error-responses'>Error Responses:</h3>
 <p>Refer to the <a href="#errors">Errors</a> section for possible error responses and their meanings.</p>
 <h1 id='market-prices-api'>Market Prices API</h1><h3 id='endpoint-2'>Endpoint:</h3>
@@ -618,9 +635,27 @@
 </tbody></table>
 
 <blockquote>
-<p>status code : 200</p>
+<p>Headers</p>
 
-<p>Response Structure:</p>
+<ul>
+<li>Content-Type: <code>application/json</code></li>
+<li>Authorization: [ API Key :  <code>your-generated-api-key</code> ]</li>
+</ul>
+
+<p>Responses</p>
+
+<ul>
+<li>200 Ok</li>
+<li>404 Not Found</li>
+</ul>
+
+<p>Headers</p>
+
+<ul>
+<li>Content-Type: <code>application/json</code></li>
+</ul>
+
+<p>body Structure:</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
@@ -648,11 +683,6 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div><h3 id='authorization-2'>Authorization</h3>
 <p>Include the following <strong>API Key</strong> in the header of your request:</p>
-
-<ul>
-<li><strong>Key:</strong> <code>x-api-key</code></li>
-<li><strong>Value:</strong> <code>your-generated-api-key</code> </li>
-</ul>
 <h3 id='error-responses-2'>Error Responses:</h3>
 <p>Refer to the <a href="#errors">Errors</a> section for possible error responses and their meanings.</p>
 <h1 id='climate-smart-information-api'>Climate Smart Information API</h1><h3 id='endpoint-3'>Endpoint:</h3>
@@ -697,9 +727,27 @@
 </tbody></table>
 
 <blockquote>
-<p>status code : 200</p>
+<p>Headers</p>
 
-<p>Response Structure:</p>
+<ul>
+<li>Content-Type: <code>application/json</code></li>
+<li>Authorization: [ API Key :  <code>your-generated-api-key</code> ]</li>
+</ul>
+
+<p>Responses</p>
+
+<ul>
+<li>200 OK</li>
+<li>404 Not Found</li>
+</ul>
+
+<p>Headers</p>
+
+<ul>
+<li>Content-Type: <code>application/json</code></li>
+</ul>
+
+<p>body Structure:</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
@@ -730,11 +778,6 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div><h3 id='authorization-3'>Authorization</h3>
 <p>Include the following <strong>API Key</strong> in the header of your request:</p>
-
-<ul>
-<li><strong>Key:</strong> <code>x-api-key</code></li>
-<li><strong>Value:</strong> <code>your-generated-api-key</code> </li>
-</ul>
 <h3 id='error-responses-3'>Error Responses:</h3>
 <p>Refer to the <a href="#errors">Errors</a> section for possible error responses and their meanings.</p>
 <h1 id='weather-forecast-api'>Weather Forecast API:</h1><h3 id='endpoint-4'>Endpoint:</h3>
@@ -771,9 +814,27 @@
 </tbody></table>
 
 <blockquote>
-<p>status code : 200</p>
+<p>Headers</p>
 
-<p>Response Structure:</p>
+<ul>
+<li>Content-Type: <code>application/json</code></li>
+<li>Authorization: [ API Key :  <code>your-generated-api-key</code> ]</li>
+</ul>
+
+<p>Responses</p>
+
+<ul>
+<li>200 OK</li>
+<li>404 Not Found</li>
+</ul>
+
+<p>Headers</p>
+
+<ul>
+<li>Content-Type: <code>application/json</code></li>
+</ul>
+
+<p>body Structure:</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
@@ -782,11 +843,6 @@
 </span><span class="p">}</span><span class="w">
 </span></code></pre></div><h3 id='authorization-4'>Authorization</h3>
 <p>Include the following <strong>API Key</strong> in the header of your request:</p>
-
-<ul>
-<li><strong>Key:</strong> <code>x-api-key</code></li>
-<li><strong>Value:</strong> <code>your-generated-api-key</code> </li>
-</ul>
 <h3 id='error-responses-4'>Error Responses:</h3>
 <p>Refer to the <a href="#errors">Errors</a> section for possible error responses and their meanings.</p>
 <h1 id='errors'>Errors</h1>
