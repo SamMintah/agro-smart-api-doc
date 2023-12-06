@@ -2,7 +2,7 @@
 title: Esoko API Reference
 
 language_tabs: # must be one of https://github.com/rouge-ruby/rouge/wiki/List-of-supported-languages-and-lexers
-  - API
+  - 
 
 toc_footers:
   - <a href='https://api-agrosmart-esoko.onrender.com/api-docs/#/Generate%20ApiKey/post_create_api_key'>Get you API-KEY</a>
@@ -21,6 +21,7 @@ meta:
 ---
 
 # Introduction
+
 
 Welcome to the documentation for the MTN Mobile App Integration with Esoko APIs. This documentation is designed to guide developers through the seamless incorporation of Esoko's powerful agricultural services into MTN's mobile app. By integrating these APIs, users gain access to valuable information such as Market Prices, Weather Forecasts, Agronomic Advisory, and Climate Smart Information.
 
@@ -65,11 +66,6 @@ If you have any questions or require assistance, feel free to reach out to our s
 Enjoy the journey of integrating Esoko's agricultural services into the MTN mobile app!
 
 
-> API-Endpoint:
-
-> `https://api-agrosmart-esoko.onrender.com`
-
-
 # Authentication
 
 To interact with Esoko's APIs, you must obtain an API key.
@@ -98,9 +94,16 @@ To access Esoko's APIs, follow these steps to generate your API key:
   You must replace <code>your-username</code> with your personal username.
   </aside>
 
-4. Click the "Submit" or "Create" button to initiate the API key creation process.
+4. Click the "Execute" button to initiate the API key creation process.
 
-> Response Structure:
+5. If successful, you will receive a response with a status code of `200` and a JSON object containing the following information:
+
+   - message: A success message.
+   - apiKey:The newly generated API key.
+
+  > status code : 200
+
+   > Response Structure:
 
 ```json
 {
@@ -109,12 +112,7 @@ To access Esoko's APIs, follow these steps to generate your API key:
 }
 ```
 
-5. If successful, you will receive a response with a status code of `200` and a JSON object containing the following information:
-
-   - message: A success message.
-   - apiKey:The newly generated API key.
-
-6. Copy the generated API key and securely store it. This key will be used in your MTN Mobile App integration to access Esoko's agricultural services.
+6. Copy the generated API key and securely store it. This key will be used in your request header to       access Esoko's agricultural services.
 
 If you encounter any issues during this process, please refer to the [Esoko API Key Management Swagger Documentation](https://api-agrosmart-esoko.onrender.com/api-docs/) for additional details and troubleshooting information.
 
@@ -135,8 +133,10 @@ This endpoint retrieves daily agricultural advice for a specific farmer-type,loc
 | Parameter       | Type   | Description                                | Example       |
 | --------------- | ------ | ------------------------------------------ | ------------- |
 | `location`      | String | The location for which advice is requested | `Tamale`      |
-| `farmerType`    | String | The type of farmer (e.g., crop_farmer)     | `crop_farmer` |
+| `farmerType`    | String | The type of farmer                         | `crop_farmer` |
 | `datePublished` | String | The date for which advice is requested     | `2023-12-05`  |
+
+> status code : 200
 
 > Response Structure:
 
@@ -171,12 +171,10 @@ This endpoint retrieves daily agricultural advice for a specific farmer-type,loc
 
 ### Authorization
 
- <aside class="">
   Include the following **API Key** in the header of your request:
 
   - **Key:** `x-api-key`
   - **Value:** `your-generated-api-key` 
-</aside>
 
 ### Error Responses:
 
@@ -200,6 +198,8 @@ This endpoint retrieves daily market prices. The response includes a list of com
 | ----------- | ------ | ---------------------------------------------------- | --------- |
 | `commodity` | String | The type of commodity for which prices are requested | `Cassava` |
 | `market`    | String | The market for which prices are requested            | `Makola`  |
+
+> status code : 200
 
 > Response Structure:
 
@@ -232,12 +232,10 @@ This endpoint retrieves daily market prices. The response includes a list of com
 
 ### Authorization
 
- <aside class="">
   Include the following **API Key** in the header of your request:
 
   - **Key:** `x-api-key`
   - **Value:** `your-generated-api-key` 
-</aside>
 
 ### Error Responses:
 
@@ -262,6 +260,8 @@ This endpoint retrieves daily climate-smart information, including weather detai
 | `farmerType` | String | The type of farmer for whom information is requested          | `Crop Farmer` |
 | `location`   | String | The location for which climate-smart information is requested | `Nkawkaw`     |
 | `commodity`  | String | The specific commodity for which information is requested     | `Rice`        |
+
+> status code : 200
 
 > Response Structure:
 
@@ -297,12 +297,10 @@ This endpoint retrieves daily climate-smart information, including weather detai
 
 ### Authorization
 
- <aside class="">
   Include the following **API Key** in the header of your request:
 
   - **Key:** `x-api-key`
   - **Value:** `your-generated-api-key` 
-</aside>
 
 ### Error Responses:
 
@@ -318,12 +316,14 @@ This endpoint provides daily weather forecasts for a specified location. Users c
 
 > `GET: https://api-agrosmart-esoko.onrender.com/weather-forecasts/v1/daily?language=twi&location=Aburi`
 
-### Query Parameters:
+### Query Parameters
 
 | Parameter  | Type   | Description                                            | Example |
 | ---------- | ------ | ------------------------------------------------------ | ------- |
 | `language` | String | The language in which to receive the weather forecast  | `twi`   |
 | `location` | String | The location for which weather forecasts are requested | `Aburi` |
+
+> status code : 200
 
 > Response Structure:
 
@@ -337,12 +337,10 @@ This endpoint provides daily weather forecasts for a specified location. Users c
 
 ### Authorization
 
- <aside class="">
   Include the following **API Key** in the header of your request:
 
   - **Key:** `x-api-key`
   - **Value:** `your-generated-api-key` 
-</aside>
 
 ### Error Responses:
 
