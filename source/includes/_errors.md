@@ -14,7 +14,6 @@ Error  Code | Meaning
 405 | Method Not Allowed -- You tried to access the resource with an invalid method. Please use a valid HTTP method.
 406 | Not Acceptable -- You requested a format that isn't JSON. Ensure your request accepts JSON.
 410 | Gone -- The requested resource has been removed from our servers.
-418 | I'm a teapot. (Just for fun!)
 429 | Too Many Requests -- You're requesting resources too frequently! Please slow down.
 500 | Internal Server Error -- We had a problem with our server while processing your request. Try again later.
 503 | Service Unavailable -- We're temporarily offline for maintenance. Please try again later.

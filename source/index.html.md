@@ -5,7 +5,7 @@ language_tabs: # must be one of https://github.com/rouge-ruby/rouge/wiki/List-of
   - 
 
 toc_footers:
-  - <a href='https://api-agrosmart-esoko.onrender.com/api-docs/#/Generate%20ApiKey/post_create_api_key'>Get you API-KEY</a>
+  - <a href='https://api-agrosmart-esoko.onrender.com/api-docs/#/Generate%20ApiKey/post_create_api_key'>Intaract with the API </a>
   - <a href='https://esoko.com/'>Documentation Powered by Esoko</a>
 
 includes:
@@ -48,11 +48,12 @@ This documentation is intended for developers, engineers, and technical teams in
   - **Market Prices:** Retrieve real-time market prices for specified commodities, locations, and time ranges.
   - **Weather Forecast:** Access detailed weather forecasts based on geographical coordinates and specific weather attributes.
   - **Agronomic Advisory:** Receive personalized agronomic advice based on user preferences, historical data, and contextual information.
-  - **Climate Smart Information:** Obtain climate-smart farming information by specifying regions and topics of interest.
+  - **Climate Smart Information:** Obtain daily climate-smart information, including weather details and agronomic tips, for a specific farmer type, location, and commodity.
+
 
 ## Getting Started
 
-Before diving into the API documentation, ensure that you have completed the necessary setup as outlined in the [MTN Mobile App Integration with Esoko APIs Setup Guide](#) to guarantee a smooth integration process.
+Before diving into the API documentation, ensure that you have completed the necessary setup as outlined in the [MTN Mobile App Integration with Esoko APIs Setup Guide](#authentication) to guarantee a smooth integration process.
 
 Now, let's explore the detailed API documentation for each service:
 
@@ -80,7 +81,7 @@ To access Esoko's APIs, follow these steps to generate your API key:
 
 3. In the request body, provide the necessary information:
 
-   > Example:
+   > request body:
 
 ```json
 {
