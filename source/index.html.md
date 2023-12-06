@@ -1,12 +1,12 @@
 ---
-title: API Reference
+title: Esoko API Reference
 
 language_tabs: # must be one of https://github.com/rouge-ruby/rouge/wiki/List-of-supported-languages-and-lexers
-  - javascript
+  - API
 
 toc_footers:
-  - <a href='#'>Sign Up for a Developer Key</a>
-  - <a href='https://github.com/slatedocs/slate'>Documentation Powered by Slate</a>
+  - <a href='https://api-agrosmart-esoko.onrender.com/api-docs/#/Generate%20ApiKey/post_create_api_key'>Get you API-KEY</a>
+  - <a href='https://esoko.com/'>Documentation Powered by Esoko</a>
 
 includes:
   - errors
@@ -24,6 +24,7 @@ meta:
 
 Welcome to the documentation for the MTN Mobile App Integration with Esoko APIs. This documentation is designed to guide developers through the seamless incorporation of Esoko's powerful agricultural services into MTN's mobile app. By integrating these APIs, users gain access to valuable information such as Market Prices, Weather Forecasts, Agronomic Advisory, and Climate Smart Information.
 
+
 ## Purpose
 
 The primary purpose of this integration is to enhance the user experience within the MTN mobile app by providing real-time and personalized agricultural insights. Developers are encouraged to follow the guidelines outlined in this documentation to ensure a secure, efficient, and successful integration with Esoko's APIs.
@@ -38,7 +39,7 @@ This documentation is intended for developers, engineers, and technical teams in
 
 - **Data Exchange Format:** All data exchanged follows the JSON (JavaScript Object Notation) format, promoting consistency and simplicity in information exchange.
 
-- **Authentication and Authorization:** OAuth 2.0 is employed for secure user authentication, with access tokens included in API requests for authorized access.
+- **Authentication and Authorization:** API keys are employed for secure user authentication, with access tokens included in API requests for authorized access.
 
 - **Error Handling:** Standardized error response formats are defined in JSON, including error codes, messages, and suggested resolutions to enhance troubleshooting.
 
@@ -59,10 +60,15 @@ Now, let's explore the detailed API documentation for each service:
 - [Climate Smart Information API Documentation](#climate-smart-information-api)
 - [Weather Forecast API Documentation](#weather-forecast-api)
 
-
 If you have any questions or require assistance, feel free to reach out to our support team.
 
 Enjoy the journey of integrating Esoko's agricultural services into the MTN mobile app!
+
+
+> API-Endpoint:
+
+> `https://api-agrosmart-esoko.onrender.com`
+
 
 # Authentication
 
@@ -80,21 +86,21 @@ To access Esoko's APIs, follow these steps to generate your API key:
 
    > Example:
 
-  ```json
-  {
-   "user": "your-username"
-  }
-   ```
+```json
+{
+  "user": "your-username"
+}
+```
 
 - **user:** Your user information is associated with the API key.
 
   <aside class="notice">
   You must replace <code>your-username</code> with your personal username.
   </aside>
- 
+
 4. Click the "Submit" or "Create" button to initiate the API key creation process.
 
-> Response:
+> Response Structure:
 
 ```json
 {
@@ -132,7 +138,7 @@ This endpoint retrieves daily agricultural advice for a specific farmer-type,loc
 | `farmerType`    | String | The type of farmer (e.g., crop_farmer)     | `crop_farmer` |
 | `datePublished` | String | The date for which advice is requested     | `2023-12-05`  |
 
- > Response
+> Response Structure:
 
 ```json
 {
@@ -165,16 +171,16 @@ This endpoint retrieves daily agricultural advice for a specific farmer-type,loc
 
 ### Authorization
 
-Include the following **API Key** in the header of your request:
+ <aside class="">
+  Include the following **API Key** in the header of your request:
 
-- **Key Name:** `x-api-key`
-- **Key Value:** `your-generated-api-key`
+  - **Key:** `x-api-key`
+  - **Value:** `your-generated-api-key` 
+</aside>
 
-
-#### Error Responses:
+### Error Responses:
 
 Refer to the [Errors](#errors) section for possible error responses and their meanings.
-
 
 # Market Prices API
 
@@ -190,14 +196,14 @@ This endpoint retrieves daily market prices. The response includes a list of com
 
 ### Query Parameters:
 
-| Parameter       | Type   | Description                                     | Example     |
-| --------------- | ------ | ----------------------------------------------- | ----------- |
-| `commodity`     | String | The type of commodity for which prices are requested | `Cassava`    |
-| `market`        | String | The market for which prices are requested       |      `Makola`     |
+| Parameter   | Type   | Description                                          | Example   |
+| ----------- | ------ | ---------------------------------------------------- | --------- |
+| `commodity` | String | The type of commodity for which prices are requested | `Cassava` |
+| `market`    | String | The market for which prices are requested            | `Makola`  |
 
- > Response
+> Response Structure:
 
- ```json
+```json
 {
   "message": "success",
   "totalCount": 2,
@@ -226,17 +232,16 @@ This endpoint retrieves daily market prices. The response includes a list of com
 
 ### Authorization
 
-Include the following **API Key** in the header of your request:
+ <aside class="">
+  Include the following **API Key** in the header of your request:
 
-- **Key Name:** `x-api-key`
-- **Key Value:** `your-generated-api-key`
+  - **Key:** `x-api-key`
+  - **Value:** `your-generated-api-key` 
+</aside>
 
-
-#### Error Responses:
+### Error Responses:
 
 Refer to the [Errors](#errors) section for possible error responses and their meanings.
-
-
 
 # Climate Smart Information API
 
@@ -252,14 +257,13 @@ This endpoint retrieves daily climate-smart information, including weather detai
 
 ### Query Parameters:
 
-| Parameter       | Type   | Description                                     | Example       |
-| --------------- | ------ | ----------------------------------------------- | ------------- |
-| `farmerType`    | String | The type of farmer for whom information is requested | `Crop Farmer` |
-| `location`      | String | The location for which climate-smart information is requested | `Nkawkaw`     |
-| `commodity`     | String | The specific commodity for which information is requested | `Rice`        |
+| Parameter    | Type   | Description                                                   | Example       |
+| ------------ | ------ | ------------------------------------------------------------- | ------------- |
+| `farmerType` | String | The type of farmer for whom information is requested          | `Crop Farmer` |
+| `location`   | String | The location for which climate-smart information is requested | `Nkawkaw`     |
+| `commodity`  | String | The specific commodity for which information is requested     | `Rice`        |
 
-
- > Response:
+> Response Structure:
 
 ```json
 {
@@ -293,16 +297,16 @@ This endpoint retrieves daily climate-smart information, including weather detai
 
 ### Authorization
 
-Include the following **API Key** in the header of your request:
+ <aside class="">
+  Include the following **API Key** in the header of your request:
 
-- **Key Name:** `x-api-key`
-- **Key Value:** `your-generated-api-key`
+  - **Key:** `x-api-key`
+  - **Value:** `your-generated-api-key` 
+</aside>
 
-
-#### Error Responses:
+### Error Responses:
 
 Refer to the [Errors](#errors) section for possible error responses and their meanings.
-
 
 # Weather Forecast API:
 
@@ -316,10 +320,10 @@ This endpoint provides daily weather forecasts for a specified location. Users c
 
 ### Query Parameters:
 
-| Parameter   | Type   | Description                                           | Example   |
-| ----------- | ------ | ----------------------------------------------------- | --------- |
-| `language`  | String | The language in which to receive the weather forecast | `twi`     |
-| `location`  | String | The location for which weather forecasts are requested | `Aburi`   |
+| Parameter  | Type   | Description                                            | Example |
+| ---------- | ------ | ------------------------------------------------------ | ------- |
+| `language` | String | The language in which to receive the weather forecast  | `twi`   |
+| `location` | String | The location for which weather forecasts are requested | `Aburi` |
 
 > Response Structure:
 
@@ -329,16 +333,17 @@ This endpoint provides daily weather forecasts for a specified location. Users c
   "description": "Text in English or French",
   "soundFileUrl": "twi_url"
 }
-
 ```
+
 ### Authorization
 
-Include the following **API Key** in the header of your request:
+ <aside class="">
+  Include the following **API Key** in the header of your request:
 
-- **Key Name:** `x-api-key`
-- **Key Value:** `your-generated-api-key`
+  - **Key:** `x-api-key`
+  - **Value:** `your-generated-api-key` 
+</aside>
 
-
-#### Error Responses:
+### Error Responses:
 
 Refer to the [Errors](#errors) section for possible error responses and their meanings.
