@@ -5,11 +5,12 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="images/favicon-637f9fd6.ico" rel="icon" type="image/ico" />
         <meta
             name="description"
             content="Documentation for the Kittn API"
         >
-    <title>API Reference</title>
+    <title>Esoko API Reference</title>
 
     <style media="screen">
       .highlight table td { padding: 5px; }
@@ -205,89 +206,90 @@
         -webkit-transition:none!important;
         transition:none!important;
       }
-      .highlight table td { padding: 5px; }
-.highlight table pre { margin: 0; }
-.highlight, .highlight .w {
-  color: #586e75;
+      .dark table td { padding: 5px; }
+.dark table pre { margin: 0; }
+.dark, .dark .w {
+  color: #f8f8f2;
+  background-color: #272822;
 }
-.highlight .err {
-  color: #002b36;
-  background-color: #dc322f;
+.dark .err {
+  color: #272822;
+  background-color: #f92672;
 }
-.highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .cpf, .highlight .c1, .highlight .cs {
-  color: #657b83;
+.dark .c, .dark .ch, .dark .cd, .dark .cm, .dark .cpf, .dark .c1, .dark .cs {
+  color: #75715e;
 }
-.highlight .cp {
-  color: #b58900;
+.dark .cp {
+  color: #f4bf75;
 }
-.highlight .nt {
-  color: #b58900;
+.dark .nt {
+  color: #f4bf75;
 }
-.highlight .o, .highlight .ow {
-  color: #93a1a1;
+.dark .o, .dark .ow {
+  color: #f8f8f2;
 }
-.highlight .p, .highlight .pi {
-  color: #93a1a1;
+.dark .p, .dark .pi {
+  color: #f8f8f2;
 }
-.highlight .gi {
-  color: #859900;
+.dark .gi {
+  color: #a6e22e;
 }
-.highlight .gd {
-  color: #dc322f;
+.dark .gd {
+  color: #f92672;
 }
-.highlight .gh {
-  color: #268bd2;
-  background-color: #002b36;
+.dark .gh {
+  color: #66d9ef;
+  background-color: #272822;
   font-weight: bold;
 }
-.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
-  color: #6c71c4;
+.dark .k, .dark .kn, .dark .kp, .dark .kr, .dark .kv {
+  color: #ae81ff;
 }
-.highlight .kc {
-  color: #cb4b16;
+.dark .kc {
+  color: #fd971f;
 }
-.highlight .kt {
-  color: #cb4b16;
+.dark .kt {
+  color: #fd971f;
 }
-.highlight .kd {
-  color: #cb4b16;
+.dark .kd {
+  color: #fd971f;
 }
-.highlight .s, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
-  color: #859900;
+.dark .s, .dark .sb, .dark .sc, .dark .dl, .dark .sd, .dark .s2, .dark .sh, .dark .sx, .dark .s1 {
+  color: #a6e22e;
 }
-.highlight .sa {
-  color: #6c71c4;
+.dark .sa {
+  color: #ae81ff;
 }
-.highlight .sr {
-  color: #2aa198;
+.dark .sr {
+  color: #a1efe4;
 }
-.highlight .si {
-  color: #d33682;
+.dark .si {
+  color: #cc6633;
 }
-.highlight .se {
-  color: #d33682;
+.dark .se {
+  color: #cc6633;
 }
-.highlight .nn {
-  color: #b58900;
+.dark .nn {
+  color: #f4bf75;
 }
-.highlight .nc {
-  color: #b58900;
+.dark .nc {
+  color: #f4bf75;
 }
-.highlight .no {
-  color: #b58900;
+.dark .no {
+  color: #f4bf75;
 }
-.highlight .na {
-  color: #268bd2;
+.dark .na {
+  color: #66d9ef;
 }
-.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mx {
-  color: #859900;
+.dark .m, .dark .mb, .dark .mf, .dark .mh, .dark .mi, .dark .il, .dark .mo, .dark .mx {
+  color: #a6e22e;
 }
-.highlight .ss {
-  color: #859900;
+.dark .ss {
+  color: #a6e22e;
 }
     </style>
-    <link href="stylesheets/screen-9c19b03a.css" rel="stylesheet" media="screen" />
-    <link href="stylesheets/print-966d6edc.css" rel="stylesheet" media="print" />
+    <link href="stylesheets/screen-6d3b1510.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print-219d7923.css" rel="stylesheet" media="print" />
       <script src="javascripts/all-b12a2749.js"></script>
 
     <script>
@@ -295,7 +297,7 @@
     </script>
   </head>
 
-  <body class="index" data-languages="[&quot;javascript&quot;]">
+  <body class="index" data-languages="[null]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -304,9 +306,6 @@
     </a>
     <div class="toc-wrapper">
       <img src="images/logo-dc9b01c6.png" class="logo" alt="" />
-        <div class="lang-selector">
-              <a href="#" data-language-name="javascript">javascript</a>
-        </div>
         <div class="search">
           <input type="text" class="search" id="input-search" placeholder="Search">
         </div>
@@ -349,6 +348,9 @@
                   <li>
                     <a href="#authorization" class="toc-h2 toc-link" data-title="Authorization">Authorization</a>
                   </li>
+                  <li>
+                    <a href="#error-responses" class="toc-h2 toc-link" data-title="Error Responses:">Error Responses:</a>
+                  </li>
               </ul>
           </li>
           <li>
@@ -362,6 +364,9 @@
                   </li>
                   <li>
                     <a href="#authorization-2" class="toc-h2 toc-link" data-title="Authorization">Authorization</a>
+                  </li>
+                  <li>
+                    <a href="#error-responses-2" class="toc-h2 toc-link" data-title="Error Responses:">Error Responses:</a>
                   </li>
               </ul>
           </li>
@@ -377,6 +382,9 @@
                   <li>
                     <a href="#authorization-3" class="toc-h2 toc-link" data-title="Authorization">Authorization</a>
                   </li>
+                  <li>
+                    <a href="#error-responses-3" class="toc-h2 toc-link" data-title="Error Responses:">Error Responses:</a>
+                  </li>
               </ul>
           </li>
           <li>
@@ -386,10 +394,13 @@
                     <a href="#endpoint-4" class="toc-h2 toc-link" data-title="Endpoint:">Endpoint:</a>
                   </li>
                   <li>
-                    <a href="#query-parameters-4" class="toc-h2 toc-link" data-title="Query Parameters:">Query Parameters:</a>
+                    <a href="#query-parameters-4" class="toc-h2 toc-link" data-title="Query Parameters">Query Parameters</a>
                   </li>
                   <li>
                     <a href="#authorization-4" class="toc-h2 toc-link" data-title="Authorization">Authorization</a>
+                  </li>
+                  <li>
+                    <a href="#error-responses-4" class="toc-h2 toc-link" data-title="Error Responses:">Error Responses:</a>
                   </li>
               </ul>
           </li>
@@ -398,8 +409,8 @@
           </li>
       </ul>
         <ul class="toc-footer">
-            <li><a href='#'>Sign Up for a Developer Key</a></li>
-            <li><a href='https://github.com/slatedocs/slate'>Documentation Powered by Slate</a></li>
+            <li><a href='https://api-agrosmart-esoko.onrender.com/api-docs/#/Generate%20ApiKey/post_create_api_key'>Intaract with the API </a></li>
+            <li><a href='https://esoko.com/'>Documentation Powered by Esoko</a></li>
         </ul>
     </div>
     <div class="page-wrapper">
@@ -415,7 +426,7 @@
 <ul>
 <li><p><strong>Communication Architecture:</strong> Utilizing RESTful principles for communication, ensuring a standardized and efficient interaction between the MTN mobile app and Esoko&#39;s APIs.</p></li>
 <li><p><strong>Data Exchange Format:</strong> All data exchanged follows the JSON (JavaScript Object Notation) format, promoting consistency and simplicity in information exchange.</p></li>
-<li><p><strong>Authentication and Authorization:</strong> OAuth 2.0 is employed for secure user authentication, with access tokens included in API requests for authorized access.</p></li>
+<li><p><strong>Authentication and Authorization:</strong> API keys are employed for secure user authentication, with access tokens included in API requests for authorized access.</p></li>
 <li><p><strong>Error Handling:</strong> Standardized error response formats are defined in JSON, including error codes, messages, and suggested resolutions to enhance troubleshooting.</p></li>
 <li><p><strong>API Services:</strong></p>
 
@@ -423,11 +434,11 @@
 <li><strong>Market Prices:</strong> Retrieve real-time market prices for specified commodities, locations, and time ranges.</li>
 <li><strong>Weather Forecast:</strong> Access detailed weather forecasts based on geographical coordinates and specific weather attributes.</li>
 <li><strong>Agronomic Advisory:</strong> Receive personalized agronomic advice based on user preferences, historical data, and contextual information.</li>
-<li><strong>Climate Smart Information:</strong> Obtain climate-smart farming information by specifying regions and topics of interest.</li>
+<li><strong>Climate Smart Information:</strong> Obtain daily climate-smart information, including weather details and agronomic tips, for a specific farmer type, location, and commodity.</li>
 </ul></li>
 </ul>
 <h2 id='getting-started'>Getting Started</h2>
-<p>Before diving into the API documentation, ensure that you have completed the necessary setup as outlined in the <a href="#">MTN Mobile App Integration with Esoko APIs Setup Guide</a> to guarantee a smooth integration process.</p>
+<p>Before diving into the API documentation, ensure that you have completed the necessary setup as outlined in the <a href="#authentication">MTN Mobile App Integration with Esoko APIs Setup Guide</a> to guarantee a smooth integration process.</p>
 
 <p>Now, let&#39;s explore the detailed API documentation for each service:</p>
 
@@ -453,11 +464,11 @@
 </ol>
 
 <blockquote>
-<p>Example:</p>
+<p>request body:</p>
 </blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="w">  </span><span class="p">{</span><span class="w">
-   </span><span class="nl">"user"</span><span class="p">:</span><span class="w"> </span><span class="s2">"your-username"</span><span class="w">
-  </span><span class="p">}</span><span class="w">
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"user"</span><span class="p">:</span><span class="w"> </span><span class="s2">"your-username"</span><span class="w">
+</span><span class="p">}</span><span class="w">
 </span></code></pre></div>
 <ul>
 <li><strong>user:</strong> Your user information is associated with the API key.</li>
@@ -468,19 +479,8 @@
   </aside></p>
 
 <ol>
-<li>Click the &quot;Submit&quot; or &quot;Create&quot; button to initiate the API key creation process.</li>
-</ol>
-
-<blockquote>
-<p>Response:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"apiKey"</span><span class="p">:</span><span class="w"> </span><span class="s2">"your-generated-api-key"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div>
-<ol>
-<li>If successful, you will receive a response with a status code of <code>200</code> and a JSON object containing the following information:</li>
+<li><p>Click the &quot;Execute&quot; button to initiate the API key creation process.</p></li>
+<li><p>If successful, you will receive a response with a status code of <code>200</code> and a JSON object containing the following information:</p></li>
 </ol>
 
 <ul>
@@ -488,8 +488,18 @@
 <li>apiKey:The newly generated API key.</li>
 </ul>
 
+<blockquote>
+<p>status code : 200</p>
+
+<p>Response Structure:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"apiKey"</span><span class="p">:</span><span class="w"> </span><span class="s2">"your-generated-api-key"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
 <ol>
-<li>Copy the generated API key and securely store it. This key will be used in your MTN Mobile App integration to access Esoko&#39;s agricultural services.</li>
+<li>Copy the generated API key and securely store it. This key will be used in your request header to       access Esoko&#39;s agricultural services.</li>
 </ol>
 
 <p>If you encounter any issues during this process, please refer to the <a href="https://api-agrosmart-esoko.onrender.com/api-docs/">Esoko API Key Management Swagger Documentation</a> for additional details and troubleshooting information.</p>
@@ -521,7 +531,7 @@
 <tr>
 <td><code>farmerType</code></td>
 <td>String</td>
-<td>The type of farmer (e.g., crop_farmer)</td>
+<td>The type of farmer</td>
 <td><code>crop_farmer</code></td>
 </tr>
 <tr>
@@ -533,7 +543,9 @@
 </tbody></table>
 
 <blockquote>
-<p>Response</p>
+<p>status code : 200</p>
+
+<p>Response Structure:</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1bad5efd-20ba-41f6-b5d6-c07ab4c0fe3d"</span><span class="p">,</span><span class="w">
@@ -565,10 +577,10 @@
 <p>Include the following <strong>API Key</strong> in the header of your request:</p>
 
 <ul>
-<li><strong>Key Name:</strong> <code>x-api-key</code></li>
-<li><strong>Key Value:</strong> <code>your-generated-api-key</code></li>
+<li><strong>Key:</strong> <code>x-api-key</code></li>
+<li><strong>Value:</strong> <code>your-generated-api-key</code> </li>
 </ul>
-<h4 id='error-responses'>Error Responses:</h4>
+<h3 id='error-responses'>Error Responses:</h3>
 <p>Refer to the <a href="#errors">Errors</a> section for possible error responses and their meanings.</p>
 <h1 id='market-prices-api'>Market Prices API</h1><h3 id='endpoint-2'>Endpoint:</h3>
 <ul>
@@ -606,7 +618,9 @@
 </tbody></table>
 
 <blockquote>
-<p>Response</p>
+<p>status code : 200</p>
+
+<p>Response Structure:</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
@@ -636,10 +650,10 @@
 <p>Include the following <strong>API Key</strong> in the header of your request:</p>
 
 <ul>
-<li><strong>Key Name:</strong> <code>x-api-key</code></li>
-<li><strong>Key Value:</strong> <code>your-generated-api-key</code></li>
+<li><strong>Key:</strong> <code>x-api-key</code></li>
+<li><strong>Value:</strong> <code>your-generated-api-key</code> </li>
 </ul>
-<h4 id='error-responses-2'>Error Responses:</h4>
+<h3 id='error-responses-2'>Error Responses:</h3>
 <p>Refer to the <a href="#errors">Errors</a> section for possible error responses and their meanings.</p>
 <h1 id='climate-smart-information-api'>Climate Smart Information API</h1><h3 id='endpoint-3'>Endpoint:</h3>
 <ul>
@@ -683,7 +697,9 @@
 </tbody></table>
 
 <blockquote>
-<p>Response:</p>
+<p>status code : 200</p>
+
+<p>Response Structure:</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
   </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span><span class="w">
@@ -716,10 +732,10 @@
 <p>Include the following <strong>API Key</strong> in the header of your request:</p>
 
 <ul>
-<li><strong>Key Name:</strong> <code>x-api-key</code></li>
-<li><strong>Key Value:</strong> <code>your-generated-api-key</code></li>
+<li><strong>Key:</strong> <code>x-api-key</code></li>
+<li><strong>Value:</strong> <code>your-generated-api-key</code> </li>
 </ul>
-<h4 id='error-responses-3'>Error Responses:</h4>
+<h3 id='error-responses-3'>Error Responses:</h3>
 <p>Refer to the <a href="#errors">Errors</a> section for possible error responses and their meanings.</p>
 <h1 id='weather-forecast-api'>Weather Forecast API:</h1><h3 id='endpoint-4'>Endpoint:</h3>
 <ul>
@@ -731,7 +747,7 @@
 <blockquote>
 <p><code>GET: https://api-agrosmart-esoko.onrender.com/weather-forecasts/v1/daily?language=twi&amp;location=Aburi</code></p>
 </blockquote>
-<h3 id='query-parameters-4'>Query Parameters:</h3>
+<h3 id='query-parameters-4'>Query Parameters</h3>
 <table><thead>
 <tr>
 <th>Parameter</th>
@@ -755,6 +771,8 @@
 </tbody></table>
 
 <blockquote>
+<p>status code : 200</p>
+
 <p>Response Structure:</p>
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
@@ -762,15 +780,14 @@
   </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Text in English or French"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"soundFileUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"twi_url"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-
 </span></code></pre></div><h3 id='authorization-4'>Authorization</h3>
 <p>Include the following <strong>API Key</strong> in the header of your request:</p>
 
 <ul>
-<li><strong>Key Name:</strong> <code>x-api-key</code></li>
-<li><strong>Key Value:</strong> <code>your-generated-api-key</code></li>
+<li><strong>Key:</strong> <code>x-api-key</code></li>
+<li><strong>Value:</strong> <code>your-generated-api-key</code> </li>
 </ul>
-<h4 id='error-responses-4'>Error Responses:</h4>
+<h3 id='error-responses-4'>Error Responses:</h3>
 <p>Refer to the <a href="#errors">Errors</a> section for possible error responses and their meanings.</p>
 <h1 id='errors'>Errors</h1>
 <aside class="notice">
@@ -812,10 +829,6 @@
 <td>Gone -- The requested resource has been removed from our servers.</td>
 </tr>
 <tr>
-<td>418</td>
-<td>I&#39;m a teapot. (Just for fun!)</td>
-</tr>
-<tr>
 <td>429</td>
 <td>Too Many Requests -- You&#39;re requesting resources too frequently! Please slow down.</td>
 </tr>
@@ -831,9 +844,6 @@
 
       </div>
       <div class="dark-box">
-          <div class="lang-selector">
-                <a href="#" data-language-name="javascript">javascript</a>
-          </div>
       </div>
     </div>
   </body>
