@@ -337,6 +337,9 @@
               </ul>
           </li>
           <li>
+            <a href="#authorization" class="toc-h1 toc-link" data-title="Authorization">Authorization</a>
+          </li>
+          <li>
             <a href="#agronomic-advisory-api" class="toc-h1 toc-link" data-title="Agronomic Advisory API">Agronomic Advisory API</a>
               <ul class="toc-list-h2">
                   <li>
@@ -344,9 +347,6 @@
                   </li>
                   <li>
                     <a href="#query-parameters" class="toc-h2 toc-link" data-title="Query Parameters:">Query Parameters:</a>
-                  </li>
-                  <li>
-                    <a href="#authorization" class="toc-h2 toc-link" data-title="Authorization">Authorization</a>
                   </li>
                   <li>
                     <a href="#error-responses" class="toc-h2 toc-link" data-title="Error Responses:">Error Responses:</a>
@@ -360,13 +360,7 @@
                     <a href="#endpoint-2" class="toc-h2 toc-link" data-title="Endpoint:">Endpoint:</a>
                   </li>
                   <li>
-                    <a href="#query-parameters-2" class="toc-h2 toc-link" data-title="Query Parameters:">Query Parameters:</a>
-                  </li>
-                  <li>
-                    <a href="#authorization-2" class="toc-h2 toc-link" data-title="Authorization">Authorization</a>
-                  </li>
-                  <li>
-                    <a href="#error-responses-2" class="toc-h2 toc-link" data-title="Error Responses:">Error Responses:</a>
+                    <a href="#available-markets" class="toc-h2 toc-link" data-title="Available Markets">Available Markets</a>
                   </li>
               </ul>
           </li>
@@ -378,9 +372,6 @@
                   </li>
                   <li>
                     <a href="#query-parameters-3" class="toc-h2 toc-link" data-title="Query Parameters:">Query Parameters:</a>
-                  </li>
-                  <li>
-                    <a href="#authorization-3" class="toc-h2 toc-link" data-title="Authorization">Authorization</a>
                   </li>
                   <li>
                     <a href="#error-responses-3" class="toc-h2 toc-link" data-title="Error Responses:">Error Responses:</a>
@@ -395,9 +386,6 @@
                   </li>
                   <li>
                     <a href="#query-parameters-4" class="toc-h2 toc-link" data-title="Query Parameters">Query Parameters</a>
-                  </li>
-                  <li>
-                    <a href="#authorization-4" class="toc-h2 toc-link" data-title="Authorization">Authorization</a>
                   </li>
                   <li>
                     <a href="#error-responses-4" class="toc-h2 toc-link" data-title="Error Responses:">Error Responses:</a>
@@ -452,8 +440,6 @@
 </ul>
 
 <p>If you have any questions or require assistance, feel free to reach out to our support team.</p>
-
-<p>Enjoy the journey of integrating Esoko&#39;s agricultural services into the MTN mobile app!</p>
 <h1 id='authentication'>Authentication</h1>
 <p>To interact with Esoko&#39;s APIs, you must obtain an API key.</p>
 <h3 id='obtaining-an-api-key'>Obtaining an API Key</h3>
@@ -507,6 +493,15 @@
 <p><aside class="notice">
 If you encounter any issues during this process, Please contact our customer service team to sign up for a developer key and begin using our API today.
   </aside></p>
+<h1 id='authorization'>Authorization</h1>
+<p>To authenticate your requests, include the following <strong>API Key</strong> in the request header:</p>
+
+<ul>
+<li><strong>Key Name:</strong> <code>x-api-key</code></li>
+<li><strong>Key Value:</strong> <code>your-generated-api-key</code></li>
+</ul>
+
+<p>This key ensures secure access to the Esoko APIs. </p>
 <h1 id='agronomic-advisory-api'>Agronomic Advisory API</h1><h3 id='endpoint'>Endpoint:</h3>
 <p><code>GET: https://api-agrosmart-esoko.onrender.com/agronomic-advice/v1/daily</code></p>
 
@@ -551,7 +546,7 @@ If you encounter any issues during this process, Please contact our customer ser
 
 <ul>
 <li>Content-Type: <code>application/json</code></li>
-<li>Authorization: [ API Key :  <code>your-generated-api-key</code> ]</li>
+<li>Authorization: [ API Key : <code>your-generated-api-key</code> ]</li>
 </ul>
 
 <p>Responses</p>
@@ -595,9 +590,7 @@ If you encounter any issues during this process, Please contact our customer ser
   </span><span class="p">],</span><span class="w">
   </span><span class="nl">"date_published"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2023-12-05T00:00:00.000Z"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='authorization'>Authorization</h3>
-<p>Include the following <strong>API Key</strong> in the header of your request:</p>
-<h3 id='error-responses'>Error Responses:</h3>
+</span></code></pre></div><h3 id='error-responses'>Error Responses:</h3>
 <p>Refer to the <a href="#errors">Errors</a> section for possible error responses and their meanings.</p>
 <h1 id='market-prices-api'>Market Prices API</h1><h3 id='endpoint-2'>Endpoint:</h3>
 <ul>
@@ -609,8 +602,72 @@ If you encounter any issues during this process, Please contact our customer ser
 <blockquote>
 <p>Sample-Query</p>
 
-<p><code>GET: https://api-agrosmart-esoko.onrender.com/market-prices/v1/daily?commodity=Cassava&amp;market=Makola</code></p>
+<p><code>GET: https://api-agrosmart-esoko.onrender.com/market-prices/v1/daily?commodity=Cassava&amp;market=Kintampo</code></p>
 </blockquote>
+
+<p><aside class=""></p>
+<h2 id='available-markets'>Available Markets</h2>
+<p>You can query for market prices from the following available markets:</p>
+
+<p></aside></p>
+
+<table><thead>
+<tr>
+<th style="text-align: left">Market Name</th>
+<th style="text-align: left">City</th>
+<th style="text-align: left">Market Name</th>
+<th style="text-align: left">City</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left">Kumasi Central</td>
+<td style="text-align: left">Kumasi</td>
+<td style="text-align: left">Gushegu</td>
+<td style="text-align: left">Gushegu</td>
+</tr>
+<tr>
+<td style="text-align: left">Kintampo</td>
+<td style="text-align: left">Kintampo</td>
+<td style="text-align: left">Yendi</td>
+<td style="text-align: left">Yendi</td>
+</tr>
+<tr>
+<td style="text-align: left">Sunyani</td>
+<td style="text-align: left">Sunyani</td>
+<td style="text-align: left">Gbinitiri</td>
+<td style="text-align: left">Gbinitiri</td>
+</tr>
+<tr>
+<td style="text-align: left">Techiman</td>
+<td style="text-align: left">Techiman</td>
+<td style="text-align: left">Tamale</td>
+<td style="text-align: left">Tamale</td>
+</tr>
+<tr>
+<td style="text-align: left">Nkranza New Market</td>
+<td style="text-align: left">Nkranza</td>
+<td style="text-align: left">Salaga</td>
+<td style="text-align: left">Salaga</td>
+</tr>
+<tr>
+<td style="text-align: left">Wenchi</td>
+<td style="text-align: left">Wenchi</td>
+<td style="text-align: left">Bolgatanga</td>
+<td style="text-align: left">Bolgatanga</td>
+</tr>
+<tr>
+<td style="text-align: left">Jirapa</td>
+<td style="text-align: left">Jirapa</td>
+<td style="text-align: left">Bawku</td>
+<td style="text-align: left">Bawku</td>
+</tr>
+<tr>
+<td style="text-align: left">Takoradi</td>
+<td style="text-align: left">Takoradi</td>
+<td style="text-align: left"></td>
+<td style="text-align: left"></td>
+</tr>
+</tbody></table>
 <h3 id='query-parameters-2'>Query Parameters:</h3>
 <table><thead>
 <tr>
@@ -630,7 +687,7 @@ If you encounter any issues during this process, Please contact our customer ser
 <td><code>market</code></td>
 <td>String</td>
 <td>The market for which prices are requested</td>
-<td><code>Makola</code></td>
+<td><code>Kintampo</code></td>
 </tr>
 </tbody></table>
 
@@ -639,7 +696,7 @@ If you encounter any issues during this process, Please contact our customer ser
 
 <ul>
 <li>Content-Type: <code>application/json</code></li>
-<li>Authorization: [ API Key :  <code>your-generated-api-key</code> ]</li>
+<li>Authorization: [ API Key : <code>your-generated-api-key</code> ]</li>
 </ul>
 
 <p>Responses</p>
@@ -681,9 +738,7 @@ If you encounter any issues during this process, Please contact our customer ser
     </span><span class="p">}</span><span class="w">
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='authorization-2'>Authorization</h3>
-<p>Include the following <strong>API Key</strong> in the header of your request:</p>
-<h3 id='error-responses-2'>Error Responses:</h3>
+</span></code></pre></div><h3 id='error-responses-2'>Error Responses:</h3>
 <p>Refer to the <a href="#errors">Errors</a> section for possible error responses and their meanings.</p>
 <h1 id='climate-smart-information-api'>Climate Smart Information API</h1><h3 id='endpoint-3'>Endpoint:</h3>
 <ul>
@@ -731,7 +786,7 @@ If you encounter any issues during this process, Please contact our customer ser
 
 <ul>
 <li>Content-Type: <code>application/json</code></li>
-<li>Authorization: [ API Key :  <code>your-generated-api-key</code> ]</li>
+<li>Authorization: [ API Key : <code>your-generated-api-key</code> ]</li>
 </ul>
 
 <p>Responses</p>
@@ -776,9 +831,7 @@ If you encounter any issues during this process, Please contact our customer ser
     </span><span class="p">}</span><span class="w">
   </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='authorization-3'>Authorization</h3>
-<p>Include the following <strong>API Key</strong> in the header of your request:</p>
-<h3 id='error-responses-3'>Error Responses:</h3>
+</span></code></pre></div><h3 id='error-responses-3'>Error Responses:</h3>
 <p>Refer to the <a href="#errors">Errors</a> section for possible error responses and their meanings.</p>
 <h1 id='weather-forecast-api'>Weather Forecast API:</h1><h3 id='endpoint-4'>Endpoint:</h3>
 <ul>
@@ -818,7 +871,7 @@ If you encounter any issues during this process, Please contact our customer ser
 
 <ul>
 <li>Content-Type: <code>application/json</code></li>
-<li>Authorization: [ API Key :  <code>your-generated-api-key</code> ]</li>
+<li>Authorization: [ API Key : <code>your-generated-api-key</code> ]</li>
 </ul>
 
 <p>Responses</p>
@@ -841,9 +894,7 @@ If you encounter any issues during this process, Please contact our customer ser
   </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Text in English or French"</span><span class="p">,</span><span class="w">
   </span><span class="nl">"soundFileUrl"</span><span class="p">:</span><span class="w"> </span><span class="s2">"twi_url"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h3 id='authorization-4'>Authorization</h3>
-<p>Include the following <strong>API Key</strong> in the header of your request:</p>
-<h3 id='error-responses-4'>Error Responses:</h3>
+</span></code></pre></div><h3 id='error-responses-4'>Error Responses:</h3>
 <p>Refer to the <a href="#errors">Errors</a> section for possible error responses and their meanings.</p>
 <h1 id='errors'>Errors</h1>
 <aside class="notice">
