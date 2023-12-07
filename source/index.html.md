@@ -61,8 +61,6 @@ Now, let's explore the detailed API documentation for each service:
 
 If you have any questions or require assistance, feel free to reach out to our support team.
 
-Enjoy the journey of integrating Esoko's agricultural services into the MTN mobile app!
-
 # Authentication
 
 To interact with Esoko's APIs, you must obtain an API key.
@@ -115,6 +113,16 @@ To access Esoko's APIs, follow these steps to generate your API key:
 If you encounter any issues during this process, Please contact our customer service team to sign up for a developer key and begin using our API today.
   </aside>
 
+# Authorization
+
+To authenticate your requests, include the following **API Key** in the request header:
+
+- **Key Name:** `x-api-key`
+- **Key Value:** `your-generated-api-key`
+
+This key ensures secure access to the Esoko APIs. 
+
+
 # Agronomic Advisory API
 
 ### Endpoint:
@@ -138,7 +146,7 @@ This endpoint retrieves daily agricultural advice for a specific farmer-type,loc
 > Headers
 
 > - Content-Type: `application/json`
-> - Authorization: [ API Key :  `your-generated-api-key` ]
+> - Authorization: [ API Key : `your-generated-api-key` ]
 
 > Responses
 
@@ -180,10 +188,6 @@ This endpoint retrieves daily agricultural advice for a specific farmer-type,loc
 }
 ```
 
-### Authorization
-
-Include the following **API Key** in the header of your request:
-
 ### Error Responses:
 
 Refer to the [Errors](#errors) section for possible error responses and their meanings.
@@ -198,19 +202,38 @@ This endpoint retrieves daily market prices. The response includes a list of com
 
 > Sample-Query
 
-> `GET: https://api-agrosmart-esoko.onrender.com/market-prices/v1/daily?commodity=Cassava&market=Makola`
+> `GET: https://api-agrosmart-esoko.onrender.com/market-prices/v1/daily?commodity=Cassava&market=Kintampo`
+
+ <aside class="">
+
+## Available Markets
+
+You can query for market prices from the following available markets:
+
+  </aside>
+
+| Market Name        | City     | Market Name | City       |
+| :----------------- | :------- | :---------- | :--------- |
+| Kumasi Central     | Kumasi   | Gushegu     | Gushegu    |
+| Kintampo           | Kintampo | Yendi       | Yendi      |
+| Sunyani            | Sunyani  | Gbinitiri   | Gbinitiri  |
+| Techiman           | Techiman | Tamale      | Tamale     |
+| Nkranza New Market | Nkranza  | Salaga      | Salaga     |
+| Wenchi             | Wenchi   | Bolgatanga  | Bolgatanga |
+| Jirapa             | Jirapa   | Bawku       | Bawku      |
+| Takoradi           | Takoradi |
 
 ### Query Parameters:
 
-| Parameter   | Type   | Description                                          | Example   |
-| ----------- | ------ | ---------------------------------------------------- | --------- |
-| `commodity` | String | The type of commodity for which prices are requested | `Cassava` |
-| `market`    | String | The market for which prices are requested            | `Makola`  |
+| Parameter   | Type   | Description                                          | Example    |
+| ----------- | ------ | ---------------------------------------------------- | ---------- |
+| `commodity` | String | The type of commodity for which prices are requested | `Cassava`  |
+| `market`    | String | The market for which prices are requested            | `Kintampo` |
 
 > Headers
 
 > - Content-Type: `application/json`
-> - Authorization: [ API Key :  `your-generated-api-key` ]
+> - Authorization: [ API Key : `your-generated-api-key` ]
 
 > Responses
 
@@ -250,10 +273,6 @@ This endpoint retrieves daily market prices. The response includes a list of com
 }
 ```
 
-### Authorization
-
-Include the following **API Key** in the header of your request:
-
 ### Error Responses:
 
 Refer to the [Errors](#errors) section for possible error responses and their meanings.
@@ -281,7 +300,7 @@ This endpoint retrieves daily climate-smart information, including weather detai
 > Headers
 
 > - Content-Type: `application/json`
-> - Authorization: [ API Key :  `your-generated-api-key` ]
+> - Authorization: [ API Key : `your-generated-api-key` ]
 
 > Responses
 
@@ -323,11 +342,6 @@ This endpoint retrieves daily climate-smart information, including weather detai
   ]
 }
 ```
-
-### Authorization
-
-Include the following **API Key** in the header of your request:
-
 ### Error Responses:
 
 Refer to the [Errors](#errors) section for possible error responses and their meanings.
@@ -352,7 +366,7 @@ This endpoint provides daily weather forecasts for a specified location. Users c
 > Headers
 
 > - Content-Type: `application/json`
-> - Authorization: [ API Key :  `your-generated-api-key` ]
+> - Authorization: [ API Key : `your-generated-api-key` ]
 
 > Responses
 
@@ -372,10 +386,6 @@ This endpoint provides daily weather forecasts for a specified location. Users c
   "soundFileUrl": "twi_url"
 }
 ```
-
-### Authorization
-
-Include the following **API Key** in the header of your request:
 
 ### Error Responses:
 
