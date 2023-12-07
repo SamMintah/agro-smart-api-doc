@@ -17,7 +17,7 @@ code_clipboard: true
 
 meta:
   - name: description
-    content: Documentation for the Kittn API
+    content: Documentation for the Esoko API Integration with MTN Mobile App
 ---
 
 # Esoko API Integration Guide for MTN Mobile App
